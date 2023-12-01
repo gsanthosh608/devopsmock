@@ -20,14 +20,25 @@ public class MvcContro {
 
 	@RequestMapping("/loginpage")
 	@ResponseBody
-	public void insert(@ModelAttribute MvcDto m) {
+	public ModelAndView insert(@ModelAttribute MvcDto m) {
 		int id = m.getId();
 		String name = m.getName();
 		String passwd = m.getPasswd();
 
 		System.out.println(id + " " + name + "  " + passwd);
 		dao.insert(m);
-
+		if(dao!=null)
+		{
+			ModelAndView mav= new ModelAndView("account_msg.jsp");
+			mav.addObject("key1",dao);
+			return mav;
+		}
+		else {
+			ModelAndView mav= new ModelAndView("account_msg1.jsp");
+			mav.addObject("key2",dao);
+			return mav;
+		}
+		
 	}
 
 	@RequestMapping("/delete")

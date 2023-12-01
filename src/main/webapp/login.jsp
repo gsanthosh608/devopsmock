@@ -7,11 +7,12 @@
 <title>Insert title here</title>
 <style>
 body {
+    background-image: url("http://wonderfulengineering.com/wp-content/uploads/2014/05/laptop-wallpaper-22.jpg");
 	font-family: Arial, sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 100%;
 	background-color: silver;
 	margin: 0;
 }
@@ -53,6 +54,7 @@ body {
 .login-container input[type="submit"]:hover {
 	background-color: #0056b3;
 }
+
 </style>
 </head>
 <body>

@@ -1,69 +1,64 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<style>
-body {
-	font-family: Arial, sans-serif;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background-color: #f3f3f3;
-	margin: 0;
-}
-
-.login-container {
-	background-color: #fff;
-	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	padding: 40px;
-	width: 300px;
-	text-align: center;
-}
-
-.login-container h2 {
-	margin-bottom: 20px;
-	color: #333;
-}
-
-.login-container input[type="text"], .login-container input[type="password"]
-	{
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 20px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-}
-
-.login-container input[type="submit"] {
-	width: 100%;
-	padding: 10px;
-	border-radius: 5px;
-	border: none;
-	background-color: #007bff;
-	color: #fff;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-}
-
-.login-container input[type="submit"]:hover {
-	background-color: #0056b3;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <style type="text/css">
+    .btn{
+    color: white;
+    }
+    
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<form action="loginpage">
-		<div class="login-container">
-			<h2>Parent Login</h2>
-			<input type="number" placeholder="id" name="id"> <input
-				type="text" placeholder="Username" name="name"> <input
-				type="text" placeholder="Password" name="passwd">
-			<button type="submit">Login</button>
-		</div>
-	</form>
+<form action="logining">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">College Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#signin">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#signup">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Welcome to Our College</h2>
+        <p>Please sign in or sign up to continue.</p>
+
+        <!-- Sign In Section -->
+        <section id="signin">
+            <h3>Sign In</h3>
+            <form action="/signin" method="post">
+                <div class="form-group">
+                    <label for="signInUsername">enter id:</label>
+                    <input type="number" class="form-control" id="signInUsername" name="id" required>
+                </div>
+                <div class="form-group">
+                    <label for="signInPassword">Password:</label>
+                    <input type="text" class="form-control" id="signInPassword" name="passwd" required>
+                </div>
+                <button type="submit" class="btn btn-primary"><a >Sign In</a> </button>
+                
+                 <button type="submit" class="btn"><a href="signup.jsp">Don't have an account? Click here</a> </button>
+            </form>
+        </section>
+
+      
+    </div>
+
+    <!-- Bootstrap JS (Optional, for some interactive components) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    </form>
 </body>
 </html>

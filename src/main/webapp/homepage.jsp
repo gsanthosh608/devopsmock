@@ -47,9 +47,13 @@
       max-width: 50%;
       height: auto;
     }
+    
+    .body{
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/Back-to-School-Wallpaper-for-Desktop.jpg");
+    }
   </style>
 </head>
-<body>
+<body class="body">
   <header>
     <h1>Welcome to Presidency School</h1>
   </header>
@@ -58,7 +62,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#courses">Courses</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Student attendance</a></li>
     </ul>
   </nav>
   <section id="home">
